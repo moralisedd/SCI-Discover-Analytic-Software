@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview</title>
+    <link rel="icon" type="image/svg+xml" href="/Assets/Images/Raytheon Icon.svg" />
+    <link rel="stylesheet" href="/CSS/Style.css" />
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js" defer></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js" defer></script>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6.5.0/turf.min.js"></script>
+
+    
+    <script src="/Scripts/map.js" defer></script>
+    <script src="/Scripts/fetch_auth.js" defer></script>
+    <script src="/Scripts/Script.js" defer></script>
+</head>
+
+<body style="background-color: #fff6f6">
+    <div class="main-container">
+        <div class="top-nav-container">
+            <div class="sci-logo">
+                <img src="/Assets/Images/SCI-logo.svg" height="auto" max-width="100%" alt="SCI-Logo" />
+            </div>
+            
+        </div>
+
+        <!-- Swiping view tab setup -->
+        <div class="view_tab">
+            <h1>
+                <span class="clickable" onclick="selectTab(1)">Product View</span> |
+                <span class="clickable" onclick="selectTab(2)">Mission Data</span>
+              </h1>
+        </div>
+        <div class="card-container">
+            <div class="geo-more item-1">
+                <button class="toggle-btn"></button>
+                <div class="more-box">
+                    <h1>Polygon Data</h1>
+                    <div class="more-stuff-box">
+                        <table id="polygon-table">
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="histogram-box">
+                    <h1>Historical Coverage</h1>
+                    <div class="histogram-stuff-box">
+                        <canvas id="coverage-histogram"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map item-2">
+                <div id="map-container"></div>
+                <div id="mission-map-container" style="display: none;"></div>
+            </div>
+
+            <div class="missions-histogram item-3">
+                <button class="toggle-btn"></button>
+                <div class="missions-box">
+                    <h1>Missions</h1>
+                    <div class="missions-stuff-box" id="mission-list">
+                        <div id="loading-message" class="loading-container">
+                            <div class="loader"></div> 
+                            Loading missions...
+                        </div>
+                    </div>
+                    <div class="missions-stuff-box" id="scene-list" style="display: none;">
+                        <div id="loading-message-scenes" class="loading-container">
+                            <div class="loader"></div> 
+                            Loading scenes...
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div id="frames-container" style="display: none;">
+        </div>
+    </div>
+</body>
+</html>
