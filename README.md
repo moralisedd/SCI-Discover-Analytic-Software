@@ -6,6 +6,8 @@ Analytics web app built for Raytheon UK as part of a 2nd-year university group p
 
 Demo: [youtu.be/8O_TkUh7Emc](https://youtu.be/8O_TkUh7Emc)
 
+<img width="1716" height="913" alt="image" src="https://github.com/user-attachments/assets/25e55c6a-9a9c-476b-bc07-4702342b38e0" />
+
 ---
 
 ## Tech Stack
