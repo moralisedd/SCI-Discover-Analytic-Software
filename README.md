@@ -1,6 +1,6 @@
 # SCi-Discover Coverage Analyser
 
-Analytics web app built for Raytheon UK as part of a 2nd-year university group project (Sheffield Hallam). Visualises satellite product geographic coverage data on an interactive Leaflet map.
+Analytics web app built for Raytheon UK as part of a 2nd-year university group project. Visualises satellite product geographic coverage data on an interactive Leaflet map.
 
 > **Note:** The SCi-Discover API credentials have expired. The app runs in **demo mode** with static sample data — all map, chart, mission, and scene interactions are fully functional.
 
